@@ -8,6 +8,7 @@ import Header from './Componets/Header';
 import TourSearch from './Componets/TourSearch';
 import Popular from './Componets/Popular';
 import Contact from './Componets/Contact';
+import About from './Componets/About';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
 <TourSearch/>
 <Popular/>
 <Packages/>
+<About/>
 <Contact/>
   </React.StrictMode>
 );
