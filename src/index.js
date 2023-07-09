@@ -1,24 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import Packages from './Componets/CheckoutPackages';
-import Hero from './Componets/Hero';
-import Header from './Componets/Header';
-import TourSearch from './Componets/TourSearch';
-import Popular from './Componets/Popular';
-import Contact from './Componets/Contact';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import Packages from "./Componets/CheckoutPackages";
+import Hero from "./Componets/Hero";
+import Header from "./Componets/Header";
+import TourSearch from "./Componets/TourSearch";
+import Popular from "./Componets/Popular";
+import Contact from "./Componets/Contact";
+import About from "./Componets/About";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-<Header/>
-<Hero/>
-<TourSearch/>
-<Popular/>
-<Packages/>
-<Contact/>
+    <Header />
+    <Hero />
+    <TourSearch />
+    <Popular />
+    <Packages />
+    <About />
+    <Contact />
   </React.StrictMode>
 );
 
