@@ -5,7 +5,7 @@ import bgcontact from "../assets/images/bgcontact.jpg"
 export default function Contact() {
   return (
     <div>
-    <div class="bg-background"></div>
+    <div  id ={"contact"}class="bg-background"></div>
     <div class="container py-5">
         <div class="row py-5 g-3">
 
@@ -30,27 +30,12 @@ export default function Contact() {
                 </form>
             </div>
             <div class="col-md-6 sec_col">
-                <img src={bgcontact}
-                    class="img-fluid"/>
+              
+                   
             </div>
             
         </div>
-        <div class="row-last">
-            <div class="row row-cols-1 row-cols-md-3  p-3 text-white">
-                <div class="col">
-                    <h4>CALL US</h4>
-                    <p>+9647713402589</p>
-                </div>
-                <div class="col">
-                    <h4>LOCATION</h4>
-                    <p>Iraq-Baghdad</p>
-                </div>
-                <div class="col">
-                    <h4>Email</h4>
-                    <p>hudaadnan399@gmail.com</p>
-                </div>
-            </div>
-        </div>
+       
     </div>
 
    

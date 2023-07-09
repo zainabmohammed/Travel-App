@@ -16,7 +16,7 @@
    */
 
   --united-nations-blue: hsl(214, 56%, 58%);
-  --bright-navy-blue: hsl(214, 57%, 51%);
+  --bright-navy-blue:  #2ecc71;
   --spanish-gray: hsl(0, 0%, 60%);
   --black-coral: hsl(225, 8%, 42%);
   --oxford-blue: hsl(208, 97%, 12%);
@@ -239,7 +239,8 @@ body {
 }
 header {
   width: 96%;
-  background: var(--bright-navy-blue);
+  width: 96%;
+  background: #2ecc716b;
   position: fixed;
   transform: translateX(-50%);
   top: 2rem;
@@ -251,6 +252,7 @@ header {
   padding: 1rem 2rem;
   z-index: 1000;
   transition: 0.2s;
+  backdrop-filter: blur(6px);
 }
 .header-active {
   top: 0;
@@ -258,17 +260,22 @@ header {
   border-radius: 0;
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
 }
+
+header .navbar{
+  margin: 0px !important;
+}
 header .navbar ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  margin: 0 !important;
 }
 header .navbar ul li {
   margin: 0 1rem;
 }
 header .navbar ul li a {
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: white;
   transition: 0.2s;
 }
@@ -288,21 +295,17 @@ header .logo i {
 header .navbar ul li {
   margin: 0 1rem;
 }
-header .navbar ul li a {
-  font-size: 2rem;
-  color: var(--pink);
-  transition: 0.2s;
-}
+
 header .navbar li .active,
 header .navbar li a:hover {
   color: var(--voilet);
 }
-.bookbtn {
-  background: var(--PrimaryColor);
+.bookbtn a {
+  background: var(--gunmetal);
   border-radius: 25px;
   color: var(--WhiteColorDeam);
-  font-size: 34px;
-  padding: 5px 15px;
+  font-size: 20px;
+  padding: 8px 18px;
   margin-left: 50px;
   display: flex;
 }
@@ -584,7 +587,7 @@ header .logo i {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 8px;
+
   box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.15);
   border-radius: 50px;
 }
@@ -619,7 +622,7 @@ header .logo i {
 }
 
 .package-card .card-price {
-  background: var(--united-nations-blue);
+  background: #2ecc71;
   color: var(--white);
   padding: 25px 20px;
   text-align: center;
@@ -1254,6 +1257,7 @@ address {
     border-bottom: none;
   }
 
+
   .navbar-link {
     color: var(--white);
     --fs-4: 16px;
@@ -1315,6 +1319,7 @@ address {
 
   .meta-box {
     --fs-8: 13px;
+    margin-right: 25px;
   }
 
   .meta-box > ion-icon {
@@ -1383,14 +1388,14 @@ body {
 }
 
 .first_col {
-  background-color: white;
-  height: 550px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  position: relative;
-  width: 550px;
-  left: 155px;
-  top: 171px;
-  border-radius: 20px;
+    background-color: white;
+    height: 550px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    width: 550px;
+    left: 155px;
+    top: 171px;
+    border-radius: 20px;
 }
 
 .img-fluid {
@@ -1398,15 +1403,16 @@ body {
 }
 
 .row-last {
-  width: 65% !important;
-  position: relative !important;
-  left: 350px;
-  top: 50px;
-  height: 100px;
-  padding-top: 40px !important ;
-  padding-bottom: 140px !important;
-  background-color: var(--bright-navy-blue);
-  border-radius: 20px;
+    width: 65% !important;
+    position: relative !important;
+    left: 350px;
+    top: 50px;
+    height: 100px;
+    padding-top:40px !important ;
+    padding-bottom: 140px !important;
+    background-color:var(--bright-navy-blue);
+    border-radius: 20px;
+
 }
 
 .btn-primary {
@@ -1447,7 +1453,7 @@ body {
     top: 0 !important;
   }
 }
-.about {
+.about{
   background: url(../assets/images/bgcontact.jpg) no-repeat left;
   background-size: 55%;
   background-color: #fdfdfd;
@@ -1467,11 +1473,13 @@ body {
   font-weight: 900;
 }
 .text {
-  font-size: 13px;
+  font-size: 22px;
   color: #545454;
-  line-height: 30px;
+  line-height: 12px;
   text-align: justify;
-  margin-bottom: 40px;
+margin-top: 10px;
+padding-top: 4px;
+
 }
 .skills button {
   font-size: 22px;
@@ -1504,3 +1512,21 @@ body {
     width: 100%;
   }
 }
+
+.card-text{
+
+  font-size:30px;
+  font-weight: bold;
+  
+}
+.card-title{
+  font-size: 40px;
+  font-weight: bold;
+
+}
+.text-day{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+

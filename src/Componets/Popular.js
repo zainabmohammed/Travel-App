@@ -1,11 +1,29 @@
+import { useEffect, useState } from 'react';
 import '../Style/style.css'
-import popular1 from '../assets/images/dubai.jpg'
 
 const Popular = () => {
+  const [data, setData] = useState([]);
+
+  const getTraveltable = () => {
+
+    fetch("https://travel-api-cpil.onrender.com/api/trips")
+      .then((res) => res.json())
+      .then((datatable) => {
+        setData(datatable?.records);
+        console.log(datatable);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    getTraveltable();
+  }, []);
+
     return ( 
         <div id="top">
          
-      <section class="popular" id="destination">
+      <section class="popular" id={"popular"}>
         <div class="container">
 
           <p class="section-subtitle">Uncover place</p>
@@ -14,12 +32,13 @@ const Popular = () => {
 
         
           <ul class="popular-list">
+          {data?.slice(0 ,3).map((el) => (
 
             <li>
               <div class="popular-card">
 
                 <figure class="card-img">
-                  <img src="./assets/images/popular-1.jpg" alt="San miguel, italy" loading="lazy"/>
+                  <img src={el?.img}/>
                 </figure>
 
                 <div class="card-content">
@@ -32,94 +51,30 @@ const Popular = () => {
                     <ion-icon name="star"></ion-icon>
                   </div>
 
+
                   <p class="card-subtitle">
-                    <a href="#">Italy</a>
+                    <a href="#">{el?.place}</a>
                   </p>
 
                   <h3 class="h3 card-title">
-                    <a href="#">San miguel</a>
+                    <a href="#">{el?.title}</a>
                   </h3>
 
                   <p class="card-text">
-                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  {el?.content}
                   </p>
 
                 </div>
 
               </div>
             </li>
+          ))}
 
-            <li>
-              <div class="popular-card">
-
-                <figure class="card-img">
-                  <img src="./assets/images/popular-2.jpg" alt="Burj khalifa, dubai" loading="lazy"/>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-
-                  <p class="card-subtitle">
-                    <a href="#">Dubai</a>
-                  </p>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Burj khalifa</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="popular-card">
-
-                <figure class="card-img">
-                  <img src={popular1} alt="Kyoto temple, japan" loading="lazy"/>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-
-                  <p class="card-subtitle">
-                    <a href="#">Japan</a>
-                  </p>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Kyoto temple</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
+            
 
           </ul>
 
-          <button class="btn btn-primary">More destintion</button>
+     
 
         </div>
       </section>

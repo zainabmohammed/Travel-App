@@ -1,276 +1,83 @@
-import '../Style/style.css'
+import { useEffect, useState } from "react";
+import "../Style/style.css";
 
-import image1 from '../assets/images/dubai.jpg'
+import image1 from "../assets/images/dubai.jpg";
 
 const Packages = () => {
-    return ( 
-    
-//    Header
+  const [data, setData] = useState([]);
 
-<section class="package" id="package">
-<div class="container">
+  const getTraveltable = () => {
 
-  <p class="section-subtitle">Popular Packeges</p>
+    fetch("https://travel-api-cpil.onrender.com/api/trips")
+      .then((res) => res.json())
+      .then((datatable) => {
+        setData(datatable?.records);
+        console.log(datatable);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    getTraveltable();
+  }, []);
 
-  <h2 class="h2 section-title">Checkout Our Packeges</h2>
+  return (
+    //    Header
 
- 
-  <ul class="package-list">
+    <section  id={"Packages"} class="package" >
+      <div class="container">
+        <p class="section-subtitle">Popular Packeges</p>
 
-    <li>
-      <div class="package-card">
+        <h2 class="h2 section-title">Checkout Our Packeges</h2>
 
-        <figure class="card-banner">
-          <img src={image1} alt="Experience The Great Holiday On Beach" loading="lazy"/>
-        </figure>
+        <ul class="package-list">
+          {data?.map((el) => (
+            <li>
+              <div class="package-card">
+                <figure class="card-banner">
+                  <img
+                    src={el?.img}
+                    alt="Experience The Great Holiday On Beach"
+                    loading="lazy"
+                  />
+                </figure>
 
-        <div class="card-content">
+                <div class="card-content">
+                  <h3 class=" card-title">{el?.title}</h3>
 
-          <h3 class="h3 card-title">دبي</h3>
+                  <p class="card-text">
+                  {el?.content}
+                  </p>
 
-          <p class="card-text">
-           يشمل الطيران ذهاب وعودة ,تأشيرة دخول,ألاقامة,رحلة سفاري,رحلة بحرية,عشاء في خور دبي ,رحلة في المدينة
-          </p>
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
 
-          <ul class="card-meta-list">
+                       
+                        <span class="text-day">أيــام</span>
+                        <p class="text">{el?.days}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
 
-            <li class="card-meta-item">
-              <div class="meta-box">
-                <ion-icon name="time"></ion-icon>
+                <div class="card-price">
+                  <p class="price">
+                  <b>{Number(el?.price).toLocaleString("en")} IQD</b>
+                                       {/* <span>/ per person</span> */}
+                  </p>
 
-                <p class="text">8 Days/7 Nights</p>
+                  <button id={"Book Now"} class="btn btn-secondary">Book Now</button>
+                </div>
               </div>
             </li>
-
-          
-
-           
-
-          </ul>
-
-        </div>
-
-        <div class="card-price">
-
-        
-
-          <p class="price">
-            $685
-            <span>/ per person</span>
-          </p>
-
-          <button class="btn btn-secondary">Book Now</button>
-
-        </div>
-
+          ))}
+        </ul>
       </div>
-    </li>
+    </section>
+  );
+};
 
-    <li>
-      <div class="package-card">
-
-        <figure class="card-banner">
-          <img src={image1} alt="Experience The Great Holiday On Beach" loading="lazy"/>
-        </figure>
-
-        <div class="card-content">
-
-          <h3 class="h3 card-title">لبنان</h3>
-
-          <p class="card-text">
-           يشمل الطيران ذهاب وعودة ,تأشيرة دخول,ألاقامة,رحلة في المدينة
-          </p>
-
-          <ul class="card-meta-list">
-
-            <li class="card-meta-item">
-              <div class="meta-box">
-                <ion-icon name="time"></ion-icon>
-
-                <p class="text">8 Days/7 Nights</p>
-              </div>
-            </li>
-
-          
-
-           
-
-          </ul>
-
-        </div>
-
-        <div class="card-price">
-
-        
-
-          <p class="price">
-            $685
-            <span>/ per person</span>
-          </p>
-
-          <button class="btn btn-secondary">Book Now</button>
-
-        </div>
-
-      </div>
-    </li>
-
-    <li>
-      <div class="package-card">
-
-        <figure class="card-banner">
-          <img src={image1} alt="Experience The Great Holiday On Beach" loading="lazy"/>
-        </figure>
-
-        <div class="card-content">
-
-          <h3 class="h3 card-title">أربيل</h3>
-
-          <p class="card-text">
-           يشمل الطيران ذهاب وعودة ,تأشيرة دخول,ألاقامة,رحلة سفاري,رحلة بحرية,عشاء في خور دبي ,رحلة في المدينة
-          </p>
-
-          <ul class="card-meta-list">
-
-            <li class="card-meta-item">
-              <div class="meta-box">
-                <ion-icon name="time"></ion-icon>
-
-                <p class="text">8 Days/7 Nights</p>
-              </div>
-            </li>
-
-          
-
-           
-
-          </ul>
-
-        </div>
-
-        <div class="card-price">
-
-        
-
-          <p class="price">
-            $685
-            <span>/ per person</span>
-          </p>
-
-          <button class="btn btn-secondary">Book Now</button>
-
-        </div>
-
-      </div>
-    </li>
-
-    <li>
-      <div class="package-card">
-
-        <figure class="card-banner">
-          <img src={image1} alt="Experience The Great Holiday On Beach" loading="lazy"/>
-        </figure>
-
-        <div class="card-content">
-
-          <h3 class="h3 card-title">دهوك</h3>
-
-          <p class="card-text">
-           يشمل الطيران ذهاب وعودة ,تأشيرة دخول,ألاقامة,رحلة سفاري,رحلة بحرية,عشاء في خور دبي ,رحلة في المدينة
-          </p>
-
-          <ul class="card-meta-list">
-
-            <li class="card-meta-item">
-              <div class="meta-box">
-                <ion-icon name="time"></ion-icon>
-
-                <p class="text">8 Days/7 Nights</p>
-              </div>
-            </li>
-
-          
-
-           
-
-          </ul>
-
-        </div>
-
-        <div class="card-price">
-
-        
-
-          <p class="price">
-            $685
-            <span>/ per person</span>
-          </p>
-
-          <button class="btn btn-secondary">Book Now</button>
-
-        </div>
-
-      </div>
-    </li>
-
-    <li>
-      <div class="package-card">
-
-        <figure class="card-banner">
-          <img src={image1} alt="Experience The Great Holiday On Beach" loading="lazy"/>
-        </figure>
-
-        <div class="card-content">
-
-          <h3 class="h3 card-title">سليمانية</h3>
-
-          <p class="card-text">
-           يشمل الطيران ذهاب وعودة ,تأشيرة دخول,ألاقامة,رحلة سفاري,رحلة بحرية,عشاء في خور دبي ,رحلة في المدينة
-          </p>
-
-          <ul class="card-meta-list">
-
-            <li class="card-meta-item">
-              <div class="meta-box">
-                <ion-icon name="time"></ion-icon>
-
-                <p class="text">8 Days/7 Nights</p>
-              </div>
-            </li>
-
-          
-
-           
-
-          </ul>
-
-        </div>
-
-        <div class="card-price">
-
-        
-
-          <p class="price">
-            $685
-            <span>/ per person</span>
-          </p>
-
-          <button class="btn btn-secondary">Book Now</button>
-
-        </div>
-
-      </div>
-    </li>
-
-  </ul>
-
-  {/* <button class="btn btn-primary">View All Packages</button> */}
-
-</div>
-</section>
-
-
-     );
-}
- 
 export default Packages;
