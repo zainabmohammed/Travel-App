@@ -9,6 +9,7 @@ import TourSearch from './Componets/TourSearch';
 import Popular from './Componets/Popular';
 import Contact from './Componets/Contact';
 import About from './Componets/About';
+import About from './Componets/Footer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +22,7 @@ root.render(
 <Packages/>
 <About/>
 <Contact/>
+  <Footer/>
   </React.StrictMode>
 );
 
