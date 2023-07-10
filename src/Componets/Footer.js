@@ -1,8 +1,17 @@
-import React from 'react'
-import "../Style/style.css"
+import React from 'react';
+import "../Style/style.css";
+import {SlPhone} from 'react-icons/sl';
+import { GiCommercialAirplane } from 'react-icons/gi';
+    
+    
+
 export default function Footer() {
+
   return (
-    <footer class="footer">
+   
+    <footer  id = {"contact"}class="footer">
+      
+    
 
     <div class="footer-top">
       <div class="container">
@@ -10,13 +19,13 @@ export default function Footer() {
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" alt="Tourly logo"/>
+          
+          <GiCommercialAirplane/>  Travel
+         
           </a>
 
           <p class="footer-text">
-            Urna ratione ante harum provident, eleifend, vulputate molestiae proin fringilla, praesentium magna conubia
-            at
-            perferendis, pretium, aenean aut ultrices.
+          Contact us if you need any inquiries, we are always available to serve you .
           </p>
 
         </div>
@@ -34,19 +43,19 @@ export default function Footer() {
             <li class="contact-item">
               <ion-icon name="call-outline"></ion-icon>
 
-              <a href="tel:+01123456790" class="contact-link">+01 (123) 4567 90</a>
+              <a href="tel:07712567898" class="contact-link"> <SlPhone/> tel : 07712567898</a>
             </li>
 
             <li class="contact-item">
               <ion-icon name="mail-outline"></ion-icon>
 
-              <a href="mailto:info.tourly.com" class="contact-link">info.tourly.com</a>
+              <a href="mailto:info.tourly.com" class="contact-link">travell@gamil.com</a>
             </li>
 
             <li class="contact-item">
               <ion-icon name="location-outline"></ion-icon>
 
-              <address>3146 Koontz, California</address>
+              <address>Baghdad , Karrada </address>
             </li>
 
           </ul>
@@ -74,7 +83,7 @@ export default function Footer() {
       <div class="container">
 
         <p class="copyright">
-          &copy; 2022 <a href="">codewithsadee</a>. All rights reserved
+          &copy; 2023 <a href="">codewithsadee</a>. All rights reserved
         </p>
 
         <ul class="footer-bottom-list">

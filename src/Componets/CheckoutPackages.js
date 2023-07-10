@@ -7,7 +7,6 @@ const Packages = () => {
   const [data, setData] = useState([]);
 
   const getTraveltable = () => {
-
     fetch("https://travel-api-cpil.onrender.com/api/trips")
       .then((res) => res.json())
       .then((datatable) => {
@@ -25,7 +24,7 @@ const Packages = () => {
   return (
     //    Header
 
-    <section  id={"Packages"} class="package" >
+    <section id={"Packages"} class="package">
       <div class="container">
         <p class="section-subtitle">Popular Packeges</p>
 
@@ -46,16 +45,13 @@ const Packages = () => {
                 <div class="card-content">
                   <h3 class=" card-title">{el?.title}</h3>
 
-                  <p class="card-text">
-                  {el?.content}
-                  </p>
+                  <p class="card-text">{el?.content}</p>
 
                   <ul class="card-meta-list">
                     <li class="card-meta-item">
                       <div class="meta-box">
                         <ion-icon name="time"></ion-icon>
 
-                       
                         <span class="text-day">أيــام</span>
                         <p class="text">{el?.days}</p>
                       </div>
@@ -65,11 +61,13 @@ const Packages = () => {
 
                 <div class="card-price">
                   <p class="price">
-                  <b>{Number(el?.price).toLocaleString("en")} IQD</b>
-                                       {/* <span>/ per person</span> */}
+                    <b>{Number(el?.price).toLocaleString("en")} IQD</b>
+                    {/* <span>/ per person</span> */}
                   </p>
 
-                  <button id={"Book Now"} class="btn btn-secondary">Book Now</button>
+                  <button id={"Book Now"} class="btn btn-secondary">
+                    Book Now
+                  </button>
                 </div>
               </div>
             </li>

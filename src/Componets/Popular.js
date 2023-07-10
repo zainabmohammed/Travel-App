@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
-import '../Style/style.css'
+import { useEffect, useState } from "react";
+import "../Style/style.css";
 
 const Popular = () => {
   const [data, setData] = useState([]);
 
   const getTraveltable = () => {
-
     fetch("https://travel-api-cpil.onrender.com/api/trips")
       .then((res) => res.json())
       .then((datatable) => {
@@ -20,70 +19,49 @@ const Popular = () => {
     getTraveltable();
   }, []);
 
-    return ( 
-        <div id="top">
-         
+  return (
+    <div id="top">
       <section class="popular" id={"popular"}>
         <div class="container">
-
           <p class="section-subtitle">Uncover place</p>
 
           <h2 class="h2 section-title">Popular destination</h2>
 
-        
           <ul class="popular-list">
-          {data?.slice(0 ,3).map((el) => (
+            {data?.slice(0, 3).map((el) => (
+              <li>
+                <div class="popular-card">
+                  <figure class="card-img">
+                    <img src={el?.img} />
+                  </figure>
 
-            <li>
-              <div class="popular-card">
+                  <div class="card-content">
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
 
-                <figure class="card-img">
-                  <img src={el?.img}/>
-                </figure>
+                    <p class="card-subtitle">
+                      <a href="#">{el?.place}</a>
+                    </p>
 
-                <div class="card-content">
+                    <h3 class="h3 card-title">
+                      <a href="#">{el?.title}</a>
+                    </h3>
 
-                  <div class="card-rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
+                    <p class="card-text">{el?.content}</p>
                   </div>
-
-
-                  <p class="card-subtitle">
-                    <a href="#">{el?.place}</a>
-                  </p>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">{el?.title}</a>
-                  </h3>
-
-                  <p class="card-text">
-                  {el?.content}
-                  </p>
-
                 </div>
-
-              </div>
-            </li>
-          ))}
-
-            
-
+              </li>
+            ))}
           </ul>
-
-     
-
         </div>
       </section>
+    </div>
+  );
+};
 
-
-     
-
-        </div>
-     );
-}
- 
 export default Popular;

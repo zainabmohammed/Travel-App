@@ -1,30 +1,57 @@
-import '../Style/style.css'
+import "../Style/style.css";
+import { GiCommercialAirplane } from "react-icons/gi";
 const Header = () => {
-    return ( 
-    <div id='top'>
-   <header>
-        <div class="logo">
-           
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#Home" class="active">Home</a></li>
-                <li><a href="#Packages">Packages</a></li>
-                <li><a href="#About">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#popular">popular</a></li>
-                <li><a href="#Review">Reviews</a></li>
-            <button className='bookbtn'> <a href="#Book Now">Book Now</a></button>
-            </ul>
-          
-        </nav>
-        <div class="fas fa-bars"></div>
-    </header>
+  return (
    
+      <header>
+         <div class="list" id="top">
+        <nav class="navbar">
+          <ul>
 
+            <div class="travel">
+              <li>       
+                <a href="#travel">
+                  <GiCommercialAirplane /> Travel
+                </a>
+              </li>
+            </div>
 
-    </div>
-     );
-}
- 
+            <div class="list-nav">
+            <li>
+              <a href="#Home" class="active">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#Packages">Packages</a>
+            </li>
+            <li>
+              <a href="#About">About Us</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#popular">popular</a>
+            </li>
+            <li>
+              <a href="#Review">Reviews</a>
+            </li>
+            </div>
+            <div class ="book now">
+
+            <button className="bookbtn">
+              <a href="#Book Now">Book Now</a>
+            </button>
+       
+          </div>
+          </ul>
+        </nav>
+        </div>
+       
+      </header>
+    
+  );
+};
+
 export default Header;
