@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import "../Style/style.css";
 
 import image1 from "../assets/images/dubai.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Packages = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate()
 
   const getTraveltable = () => {
     fetch("https://travel-api-cpil.onrender.com/api/trips")
@@ -65,7 +67,7 @@ const Packages = () => {
                     {/* <span>/ per person</span> */}
                   </p>
 
-                  <button id={"Book Now"} class="btn btn-secondary">
+                  <button id={"Book Now"} onClick={()=> navigate(`/book/${el.id}`)}  class="btn btn-secondary">
                     Book Now
                   </button>
                 </div>

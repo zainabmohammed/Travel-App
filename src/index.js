@@ -2,26 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Packages from "./Componets/CheckoutPackages";
-import Hero from "./Componets/Hero";
-import Header from "./Componets/Header";
-import TourSearch from "./Componets/TourSearch";
-import Popular from "./Componets/Popular";
-import Contact from "./Componets/Contact";
-import About from "./Componets/About";
-import Footer from "./Componets/Footer";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Header />
-    <Hero />
-    <TourSearch />
-    <Popular />
-    <Packages />
-    <About />
-
-    <Footer />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
