@@ -10,6 +10,7 @@ import Popular from './Componets/Popular';
 import Contact from './Componets/Contact';
 import About from './Componets/About';
 import About from './Componets/Footer';
+import About from './Componets/Booking';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +24,7 @@ root.render(
 <About/>
 <Contact/>
   <Footer/>
+  <Booking/>
   </React.StrictMode>
 );
 
