@@ -1,4 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
 /*-----------------------------------*\
+
  * #style.css
 \*-----------------------------------*/
 
@@ -277,12 +285,12 @@ header .navbar ul li {
 }
 header .navbar ul li a {
   font-size: 1.4rem;
-  color: white;
+  color:var(--BlackColor);
   transition: 0.2s;
 }
-header .navbar li .active,
+header .navbar li a:active,
 header .navbar li a:hover {
-  color: white !important;
+  color:white !important ;
 }
 header .logo {
   font-size: 2rem;
@@ -297,7 +305,7 @@ header .navbar ul li {
   margin: 0 1rem;
 }
 
-header .navbar li .active,
+header .navbar li  .active,
 header .navbar li a:hover {
   color: var(--voilet);
 }
@@ -540,9 +548,9 @@ header .logo i {
  * #PACKAGE
 \*-----------------------------------*/
 
-.package {
+/* .package {
   padding-block: var(--section-padding);
-}
+} */
 
 .package-list {
   margin-bottom: 40px;
@@ -702,7 +710,7 @@ header .logo i {
 }
 
 /*-----------------------------------*\
- * #CTA
+ * #C
 \*-----------------------------------*/
 
 .cta {
@@ -738,6 +746,8 @@ header .logo i {
 
 .footer-brand .logo {
   margin-bottom: 20px;
+  color: white;
+  font-size: 25px;
 }
 
 .footer-text {
@@ -756,13 +766,15 @@ header .logo i {
   font-family: var(--ff-montserrat);
   font-weight: var(--fw-500);
   margin-bottom: 30px;
+  
+
 }
 
 .contact-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
-  left: 0;
+  left: 0px;
   width: 50px;
   height: 2px;
   background: var(--bright-navy-blue);
@@ -773,6 +785,7 @@ header .logo i {
   margin-bottom: 15px;
   max-width: 200px;
 
+  
 }
 
 .contact-item {
@@ -781,6 +794,7 @@ header .logo i {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+ 
 }
 
 .contact-item ion-icon {
@@ -1549,7 +1563,7 @@ padding-top: 4px;
 }
 
 .popular-card{
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .popular-card  :hover{
@@ -1573,4 +1587,19 @@ padding-top: 4px;
 
   
 }
+
+
+.travel-logo a{
+  font-weight:500 ;
+  font-size: 23px !important;
+  display: flex;
+ 
+  gap: 3px;
+ 
+
+}
+
+ 
+
+
  

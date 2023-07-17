@@ -2,7 +2,10 @@ import React from 'react';
 import "../Style/style.css";
 import {SlPhone} from 'react-icons/sl';
 import { GiCommercialAirplane } from 'react-icons/gi';
+import {CgMail  } from 'react-icons/cg';
+import {MdOutlineLocationOn } from 'react-icons/md';
     
+
     
 
 export default function Footer() {
@@ -42,20 +45,23 @@ export default function Footer() {
 
             <li class="contact-item">
               <ion-icon name="call-outline"></ion-icon>
+              <span><SlPhone/></span>
 
-              <a href="tel:07712567898" class="contact-link"> <SlPhone/> tel : 07712567898</a>
+              <a href="tel:07712567898" class="contact-link">    tel : 07712567898</a>
             </li>
 
             <li class="contact-item">
               <ion-icon name="mail-outline"></ion-icon>
+             <span><CgMail/></span> 
 
               <a href="mailto:info.tourly.com" class="contact-link">travell@gamil.com</a>
             </li>
 
             <li class="contact-item">
               <ion-icon name="location-outline"></ion-icon>
+             
 
-              <address>Baghdad , Karrada </address>
+              <address>  <MdOutlineLocationOn/> Baghdad , Karrada </address>
             </li>
 
           </ul>
