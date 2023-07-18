@@ -13,9 +13,9 @@ export default function About() {
                 deleniti autem error eos totam
                  nisi neque voluptates sit deleniti autem error eos totam nisi neque.
             </p>
-            <div class="skills">
+            {/* <div class="skills">
                 <button>Contact Us</button>
-            </div>
+            </div> */}
         </div>
     </div>
   )

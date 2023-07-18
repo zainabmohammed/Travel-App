@@ -39,41 +39,41 @@ const BookScreen = () => {
   };
 
   return (
-    <>
+    <div className="booking">
       {/* <h1>Book Screen {tripId}</h1> */}
-      <div class="container">
-        <div class="contact-box">
-          <div class="left"></div>
-          <div class="right">
+      <div className="container">
+        <div className="contact-box">
+          <div className="left"></div>
+          <div className="right">
             <h2>Booking Now</h2>
             <input
               value={customerName}
               onChange={(e) => setCustomerName(e.target.value)}
               type="text"
-              class="field"
+              className="field"
               placeholder="Your Name"
             />
             <input
               value={customerAddress}
               onChange={(e) => setCustomerAddress(e.target.value)}
               type="text"
-              class="field"
+              className="field"
               placeholder="Your Location"
             />
             <input
               value={customerPhone}
               onChange={(e) => setCustomerPhone(e.target.value)}
               type="text"
-              class="field"
+              className="field"
               placeholder="Phone"
             />
-            <button onClick={handleSubmit} class="btn">
+            <button onClick={handleSubmit} className="btn">
               {loading ? "Loading..." : "Send"}
             </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

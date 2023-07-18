@@ -34,13 +34,13 @@ const Header = () => {
               <li>
                 <a href="#popular">popular</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#Review">Reviews</a>
-              </li>
+              </li> */}
             </div>
             <div class="book now">
               <button className="bookbtn">
-                <a href="#Book Now">Book Now</a>
+                <a href="#Book Now">choose your trip</a>
               </button>
             </div>
           </ul>

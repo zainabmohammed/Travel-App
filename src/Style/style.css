@@ -1239,7 +1239,8 @@ address {
    */
 
   .container {
-    max-width: 1050px;
+    max-width: 1050px !important;
+    
   }
 
   /**
@@ -1584,6 +1585,7 @@ padding-top: 4px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 55px;
 
   
 }
@@ -1599,9 +1601,9 @@ padding-top: 4px;
 
 }
 
- 
-.contact-box{
-	max-width: 850px;
+
+.booking  .contact-box{
+	max-width: 850px !important;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: center;
@@ -1609,25 +1611,27 @@ padding-top: 4px;
 	text-align: center;
 	background-color: #fff;
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+  margin-top: 160px;
+  margin-left: 70px;
 }
 
-.left{
+.booking .left{
 	background: url("../assets/images/bg.jpg") no-repeat center;
 	background-size: cover;
 	height: 100%;
 }
 
-.right{
+.booking .right{
 	padding: 25px 40px;
 }
 
-h2{
+.booking  h2{
 	position: relative;
 	padding: 0 0 10px;
 	margin-bottom: 10px;
 }
 
-h2:after{
+.booking h2:after{
 	content: '';
     position: absolute;
     left: 50%;
@@ -1639,7 +1643,7 @@ h2:after{
     background-color: #2ecc71;
 }
 
-.field{
+.booking .field{
 	width: 100%;
 	border: 2px solid rgba(0, 0, 0, 0);
 	outline: none;
@@ -1650,15 +1654,15 @@ h2:after{
 	transition: .3s;
 }
 
-.field:hover{
+.booking .field:hover{
 	background-color: rgba(0, 0, 0, 0.1);
 }
 
-textarea{
+.booking textarea{
 	min-height: 150px;
 }
 
-.btn{
+.booking .btn{
 	width: 100%;
 	padding: 0.5rem 1rem;
 	background-color: #2ecc71;
@@ -1670,20 +1674,20 @@ textarea{
 	transition: .3s;
 }
 
-.btn:hover{
+.booking .btn:hover{
     background-color: #27ae60;
 }
 
-.field:focus{
+.booking .field:focus{
     border: 2px solid rgba(30,85,250,0.47);
     background-color: #fff;
 }
 
 @media screen and (max-width: 880px){
-	.contact-box{
+	.booking .contact-box{
 		grid-template-columns: 1fr;
 	}
-	.left{
+	.booking .left{
 		height: 200px;
 	}
-} 
+}
