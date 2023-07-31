@@ -56,6 +56,7 @@ const Packages = () => {
 
                         <span class="text-day">أيــام</span>
                         <p class="text">{el?.days}</p>
+                        <p class="text2">{el.date}</p>
                       </div>
                     </li>
                   </ul>
