@@ -56,7 +56,7 @@ const Packages = () => {
 
                         <span class="text-day">أيــام</span>
                         <p class="text">{el?.days}</p>
-                        <p class="text2">{el.date}</p>
+                        {/* <p class="text2">{dayjs(date).format("YYYY-MM-DD")}</p> */}
                       </div>
                     </li>
                   </ul>
@@ -70,6 +70,7 @@ const Packages = () => {
 
                   <button id={"Book Now"} onClick={()=> navigate(`/book/${el.id}`)}  class="btn btn-secondary">
                     Book Now
+                    
                   </button>
                 </div>
               </div>
